@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ title_name }}!{% endblock %}
+
+{% block body %}
+
+    <div id="map" class="fh5co-map"></div>
+    <!-- END map -->
+
+    <div id="fh5co-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-push-1 animate-box">
+
+                    <div class="fh5co-contact-info">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+                            <li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                            <li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                            <li class="url"><a href="http://gettemplates.co">yoursite.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-6 animate-box">
+                    <h3>Get In Touch</h3>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {{ include('part/part_discount.html.twig') }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+    <script src="js/google_map.js"></script>
+{% endblock %}

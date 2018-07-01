@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ title_name }}!{% endblock %}
+
+{% block body %}
+    {{ include('part/part_services.html.twig') }}
+    {{ include('part/part_trainer.html.twig') }}
+    {{ include('part/part_schedule.html.twig') }}
+    {{ include('part/part_pricing.html.twig') }}
+    {{ include('part/part_gallery.html.twig') }}
+    {{ include('part/part_client.html.twig') }}
+    {{ include('part/part_discount.html.twig') }}
+    {{ include('part/part_blog.html.twig') }}
+
+{% endblock %}

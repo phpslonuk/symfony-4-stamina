@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ title_name }}!{% endblock %}
+
+{% block body %}
+
+    {{ include('part/part_pricing.html.twig') }}
+
+    {{ include('part/part_discount.html.twig') }}
+
+
+{% endblock %}
